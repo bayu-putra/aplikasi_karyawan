@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class pendidikan extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 
     /**
      * Get the biodata that owns the pendidikan

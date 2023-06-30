@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('biodatas', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('tempat_lahir');
+            $table->date('tanggal_lahir');
+            $table->enum('gender', [1, 2]);
+            $table->enum('agama', ['islam','katolik','kristen','hindu','budha']);
             $table->string('alamat');
             $table->string('nomer_hp');
             $table->string('email');
-            $table->date('tanggal');
-            $table->enum('gender', [1, 2]);
             $table->timestamps();
         });
     }
